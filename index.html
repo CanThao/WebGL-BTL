@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Can Thao</title>
+    <link rel="stylesheet" href="./webgl.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js" integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ==" crossorigin="anonymous" defer>
+    </script>
+    <script src="webgl.js" defer></script>
+
+</head>
+
+<body>
+    <video controls width="250">
+
+        <source src="/media/cc0-videos/flower.webm"
+                type="video/webm">
+    
+        <source src="/media/cc0-videos/flower.mp4"
+                type="video/mp4">
+    
+        Sorry, your browser doesn't support embedded videos.
+       
+    </video>
+    <figure>
+        <figcaption>Can Thao</figcaption>
+        <audio controls src="../resources/thao.mp3">
+                Your browser does not support the
+                <code>audio</code>
+                 element.
+        </audio>
+    </figure>
+
+    <form name="Form">
+        <br> Góc: <input type="number" name="angle" value="30">
+        <input type="button" value="Quay" onclick="Rotate()">
+        <br><br> Dịch chuyển: <br>
+        <input type="button" value="Lên" onclick="Up()" style="margin-right: 10px;margin-left: 10px;">
+        <input type="button" value="Xuống" onclick="Down()" style="margin-right: 10px;">
+        <input type="button" value="Trái" onclick="Left()" style="margin-right: 10px;">
+        <input type="button" value="Phải" onclick="Right()" style="margin-right: 10px;">
+        <input type="button" value="Gần" onclick="Near()" style="margin-right: 10px;">
+        <input type="button" value="Xa" onclick="Far()" style="margin-right: 10px;">
+
+        <br><br> Thay đổi điểm mắt nhìn:
+        <br> x: <input type="number" name="look_x" value="0.0" step="0.1">
+        <br> y: <input type="number" name="look_y" value="0.0" step="0.1">
+        <br> z: <input type="number" name="look_z" value="10.0" step="0.1">
+        <input type="button" value="Thay đổi" onclick="LookChanged()" style="margin-right: 10px;margin-left: 10px;">
+    </form>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+
+</body>
+
+</html>
